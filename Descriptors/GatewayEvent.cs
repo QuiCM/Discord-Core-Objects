@@ -39,15 +39,6 @@ namespace Discord.Descriptors
             return this;
         }
 
-        internal virtual GatewayEvent<T> Cast<T>()
-        {
-            if (typeof(TPayload) == typeof(Newtonsoft.Json.Linq.JToken))
-            {
-                return new GatewayEvent<T>(OpCode).WithPayload((Payload as Newtonsoft.Json.Linq.JToken).ToObject<T>());
-            }
-            return null;
-        }
-
         public virtual string Serialize(JsonSerializerSettings jss = null)
         {
             if (jss == null)
