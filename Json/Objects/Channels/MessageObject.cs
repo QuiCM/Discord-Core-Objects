@@ -8,17 +8,45 @@ namespace Discord.Json.Objects.Channels
     /// </summary>
     public class MessageObject
     {
+        /// <summary>
+        /// Message ID
+        /// </summary>
         public ulong id;
+        /// <summary>
+        /// Channel ID
+        /// </summary>
         public ulong channel_id;
-        public ulong author;
+        /// <summary>
+        /// Guild ID
+        /// </summary>
+        public ulong? guild_id;
+        /// <summary>
+        /// User object. Only ID relevant
+        /// </summary>
+        public UserObject author;
+        /// <summary>
+        /// Member object. Irrelevant with correct mapping
+        /// </summary>
         public Guilds.Members.MemberObject member;
         public string content;
+        /// <summary>
+        /// Actually a datetime. Nothing like consistency
+        /// </summary>
         public DateTime? timestamp;
+        /// <summary>
+        /// Actually a datetime. Nothing like consistency
+        /// </summary>
         public DateTime? edited_timestamp;
         public bool tts;
         public bool mention_everyone;
+        /// <summary>
+        /// User object with an added MemberObject field. MemberObject field irrelevant
+        /// </summary>
         public UserObject[] mentions;
-        public Guilds.RoleObject[] mention_roles;
+        /// <summary>
+        /// Role IDs only
+        /// </summary>
+        public ulong[] mention_roles;
         public AttachmentObject[] attachments;
         public Embeds.EmbedObject[] embeds;
         public ReactionObject[] reactions;

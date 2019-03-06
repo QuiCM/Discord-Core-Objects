@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace Discord.Descriptors.Guilds.Members
 {
@@ -8,6 +9,7 @@ namespace Discord.Descriptors.Guilds.Members
         /// <summary>
         /// The User object related to this member
         /// </summary>
+        [JsonProperty("user")]
         public UserDescriptor User { get; set; }
         /// <summary>
         /// Member's nickname, if any
@@ -32,8 +34,11 @@ namespace Discord.Descriptors.Guilds.Members
         /// <summary>
         /// Member's guild. Only set during certain events. Check for null before using
         /// </summary>
-        public GuildDescriptor Guild { get; set; }
+        [JsonIgnore]
+        public virtual GuildDescriptor Guild { get; set; }
+        [JsonIgnore]
         public VoiceStateDescriptor VoiceState { get; set; }
+        [JsonIgnore]
         public PresenceDescriptor PresenceState { get; set; }
     }
 }

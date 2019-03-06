@@ -12,7 +12,7 @@ namespace Discord.Descriptors
         public int? Sequence { get; set; }
         [JsonProperty("t", DefaultValueHandling = DefaultValueHandling.Ignore)]
         [System.ComponentModel.DefaultValue(null)]
-        public EventType Type { get; set; } = EventType.NONE;
+        public Enums.EventType Type { get; set; } = Enums.EventType.NONE;
 
         public DispatchGatewayEvent() : base() { }
         public DispatchGatewayEvent(GatewayOpCode opCode) : base(opCode) { }

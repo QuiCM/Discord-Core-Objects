@@ -1,4 +1,4 @@
-﻿namespace Discord.Descriptors
+﻿namespace Discord.Enums
 {
     public enum EventType
     {
@@ -37,6 +37,10 @@
         MESSAGE_REACTION_REMOVE_ALL,
 
         PRESENCE_UPDATE,
+        /// <summary>
+        /// I have no idea what this one does. Completely undocumented
+        /// </summary>
+        PRESENCES_REPLACE,
         TYPING_START,
         USER_UPDATE,
 

@@ -1,8 +1,12 @@
-﻿namespace Discord.Descriptors.Guilds.Members
+﻿using Newtonsoft.Json;
+
+namespace Discord.Descriptors.Guilds.Members
 {
     public class VoiceStateDescriptor : Json.Objects.Guilds.Members.VoiceStateObject
     {
-        public GuildDescriptor Guild { get; set; }
+        [JsonIgnore]
+        public virtual GuildDescriptor Guild { get; set; }
+        [JsonIgnore]
         public Channels.VoiceChannelDescriptor Channel { get; set; }
         public UserDescriptor User { get; set; }
         public string Session => session_id;

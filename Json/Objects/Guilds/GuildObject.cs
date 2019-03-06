@@ -16,10 +16,10 @@ namespace Discord.Json.Objects.Guilds
         public ulong owner_id;
         public Permissions permissions;
         public string region;
-        public ulong afk_channel_id;
+        public ulong? afk_channel_id;
         public int afk_timeout;
         public bool embed_enabled;
-        public ulong embed_channel_id;
+        public ulong? embed_channel_id;
         public VerificationLevel verification_level;
         public NotificationLevel default_message_notifications;
         public ExplicitContentLevel explicit_content_filter;
@@ -29,7 +29,7 @@ namespace Discord.Json.Objects.Guilds
         public MfaLevel mfa_level;
         public ulong? application_id;
         public bool widget_enabled;
-        public ulong widget_channel_id;
+        public ulong? widget_channel_id;
         public ulong? system_channel_id;
         public DateTime joined_at;
         public bool large;

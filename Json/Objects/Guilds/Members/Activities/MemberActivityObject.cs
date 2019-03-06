@@ -13,5 +13,7 @@ namespace Discord.Json.Objects.Guilds.Members.Activities
         public string state;
         public MemberActivityPartyObject party;
         public MemberActivityAssetObject assets;
+        public bool? instance;
+        public ActivityFlags? flags;
     }
 }

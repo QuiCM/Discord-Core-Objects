@@ -47,8 +47,8 @@
         /// </summary>
         HeartbeatAck = 11,
         /// <summary>
-        /// Used for sending events to handlers. Registering a handler against <see cref="GatewayOpCode.All"/>
-        /// will cause every event to be sent through the handler.
+        /// Used for sending all events to registered handlers. Registering a handler against <see cref="All"/>
+        /// will cause every event to be sent through that handler.
         /// </summary>
         All = 255
     }

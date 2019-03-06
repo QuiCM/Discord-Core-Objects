@@ -1,4 +1,6 @@
-﻿namespace Discord.Json.Objects
+﻿using Discord.Enums;
+
+namespace Discord.Json.Objects
 {
     public class UserObject
     {
@@ -10,5 +12,7 @@
         public bool? mfa_enabled;
         public bool? verified;
         public string email;
+        public UserFlags flags;
+        public NitroSubscription premium_type;
     }
 }

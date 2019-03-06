@@ -17,5 +17,6 @@
         public Activities.MemberActivityObject game;
         public ulong guild_id;
         public string status;
+        public Activities.MemberActivityObject[] activities;
     }
 }

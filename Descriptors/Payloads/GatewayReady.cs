@@ -10,11 +10,9 @@ namespace Discord.Descriptors.Payloads
     {
         [JsonProperty("v")]
         public int Version { get => v; set => v = value; }
-        //Custom converter required
+        [JsonProperty("user")]
         public UserDescriptor User { get; set; }
-        //Custom converter required
-        public IEnumerable<ChannelDescriptor> Channels { get; set; }
-        //Custom converter required
+        [JsonProperty("guilds")]
         public IEnumerable<GuildDescriptor> Guilds { get; set; }
         [JsonProperty("session_id")]
         public string Session { get => session_id; set => session_id = value; }
